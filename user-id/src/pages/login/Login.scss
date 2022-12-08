@@ -1,0 +1,254 @@
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, #dbdbdb, #9fa3a4, #9faaae, #dbdbdb);
+
+  form {
+    background-color: whitesmoke;
+    max-width: 400px;
+    padding: 20px;
+    width: 100%;
+    border-radius: 5px;
+
+    h2 {
+      font-size: 20px;
+      font-weight: bold;
+      color: #232826;
+      text-align: center;
+    }
+    button {
+      height: 50px;
+      width: 100%;
+      background-color: #262c2e;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-weight: 400;
+      font-size: 18px;
+      margin: 15px 0px 10px 0px;
+      cursor: pointer;
+      transition: 0.5s;
+
+      &:hover {
+        background-color: #264d59;
+      }
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: whitesmoke;
+      width: 100%;
+      height: 100%;
+      transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+      visibility: hidden;
+      opacity: 0;
+      transform: scale(1.1);
+    }
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 1rem 1.5rem;
+      width: 24rem;
+      border-radius: 0.5rem;
+    }
+    .close-button {
+      float: right;
+      width: 1.5rem;
+      line-height: 1.5rem;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 0.25rem;
+      background-color: lightgray;
+    }
+    .close-button:hover {
+      background-color: darkgray;
+    }
+    .show-modal {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+      transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+    }
+
+    .formLink {
+      text-align: center;
+    }
+    .line {
+      height: 1px;
+      width: 100%;
+      margin: 20px 0px;
+      position: relative;
+      background-color: #d4d4d4;
+
+      &::before {
+        content: "Or";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: whitesmoke;
+        color: #232826;
+        padding: 0 15px;
+      }
+    }
+
+    .google {
+      position: relative;
+      display: flex;
+      background-color: rgb(39, 39, 39);
+      color: white;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      border: 1px solid #cacaca;
+      width: 100%;
+      margin-top: 20px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: rgb(21, 21, 21);
+      }
+    }
+    .googleImg {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+    }
+  }
+  .formInput {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+
+    input {
+      padding: 10px;
+      margin: 8px 0px;
+      border: 1px solid #cccbcb;
+      outline: none;
+      font-size: 16px;
+      font-weight: 400;
+
+      &:focus {
+        border-bottom-width: 2px;
+      }
+
+      &:invalid[focused="true"] {
+        border: 1px solid red;
+      }
+
+      &:invalid[focused="true"] ~ .errorMessage {
+        display: block;
+      }
+    }
+    .errorMessage {
+      font-size: 12px;
+      font-weight: bold;
+      color: red;
+      display: none;
+    }
+  }
+
+  /* background animation */
+
+  .wrapper div {
+    width: 70px;
+    height: 70px;
+    border: 3px solid black;
+    position: absolute;
+  }
+  .item0 {
+    top: 70%;
+    left: 65%;
+    animation: square 5s linear infinite;
+  }
+  .item1 {
+    top: 40%;
+    left: 15%;
+    animation: square 5s linear infinite;
+  }
+
+  .item2 {
+    top: 40%;
+    left: 94%;
+    animation: square 7s linear infinite;
+  }
+
+  .item3 {
+    top: 75%;
+    left: 10%;
+    animation: square 9s linear infinite;
+  }
+
+  .item4 {
+    top: 55%;
+    left: 63%;
+    animation: square 11s linear infinite;
+  }
+
+  .item5 {
+    top: 10%;
+    left: 10%;
+    animation: square 7s linear infinite;
+  }
+
+  .item6 {
+    top: 85%;
+    left: 40%;
+    animation: square 13s linear infinite;
+  }
+
+  .item7 {
+    top: 70%;
+    left: 83%;
+    animation: square 12s linear infinite;
+  }
+
+  .item8 {
+    top: 10%;
+    left: 50%;
+    animation: square 8s linear infinite;
+  }
+
+  .item9 {
+    top: 20%;
+    left: 75%;
+    animation: square 9s linear infinite;
+  }
+
+  .item10 {
+    top: 40%;
+    left: 40%;
+    animation: square 7s linear infinite;
+  }
+
+  @keyframes square {
+    0% {
+      transform: scale(0) translateY(0) rotate(0);
+      opacity: 1;
+    }
+
+    100% {
+      transform: scale(1.2) translateY(-180px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+}

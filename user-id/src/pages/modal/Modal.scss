@@ -1,0 +1,118 @@
+body {
+  background: linear-gradient(to right, #dbdbdb,#9fa3a4, #9faaae,#dbdbdb);
+}
+
+.final {
+  text-align: center;
+  margin: 30vh 35vw;
+  
+
+  .modal-content-div{
+    padding: 100px;
+    min-width: 100%;
+    box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
+    background: whitesmoke;
+    text-align: center;
+
+    &:hover{
+      transition-timing-function: ease-in;
+      transition-duration: 1ms;
+      box-shadow: rgba(0, 0, 0, 0.50) 0px 5px 10px;
+    }
+
+    .heading-thankyou{
+      font-size: 27px;
+    }
+
+    .content > p{
+      font-size: large;
+    }
+
+  }
+
+  /* background animation */
+
+  .wrapper div {
+    width: 70px;
+    height: 70px;
+    border: 3px solid black;
+    border-radius: 50%;
+    position: absolute;
+  }
+  .item0 {
+    top: 70%;
+    left: 65%;
+    animation: square 5s linear infinite;
+  }
+  .item1 {
+    top: 40%;
+    left: 15%;
+    animation: square 5s linear infinite;
+  }
+
+  .item2 {
+    top: 40%;
+    left: 94%;
+    animation: square 7s linear infinite;
+  }
+
+  .item3 {
+    top: 75%;
+    left: 10%;
+    animation: square 9s linear infinite;
+  }
+
+  .item4 {
+    top: 55%;
+    left: 63%;
+    animation: square 11s linear infinite;
+  }
+
+  .item5 {
+    top: 10%;
+    left: 10%;
+    animation: square 7s linear infinite;
+  }
+
+  .item6 {
+    top: 85%;
+    left: 40%;
+    animation: square 13s linear infinite;
+  }
+
+  .item7 {
+    top: 70%;
+    left: 83%;
+    animation: square 12s linear infinite;
+  }
+
+  .item8 {
+    top: 10%;
+    left: 50%;
+    animation: square 8s linear infinite;
+  }
+
+  .item9 {
+    top: 20%;
+    left: 75%;
+    animation: square 9s linear infinite;
+  }
+
+  .item10 {
+    top: 40%;
+    left: 40%;
+    animation: square 7s linear infinite;
+  }
+
+  @keyframes square {
+    0% {
+      transform: scale(0) translateY(0) rotate(0);
+      opacity: 1;
+    }
+
+    100% {
+      transform: scale(1.2) translateY(-90px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+}
